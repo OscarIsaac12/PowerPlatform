@@ -74,3 +74,11 @@ Landing As screen:
         Y: =17
         ZIndex: =8
 
+    Label6 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Text: ="Felipe"
+        X: =902
+        Y: =72
+        ZIndex: =9
+
