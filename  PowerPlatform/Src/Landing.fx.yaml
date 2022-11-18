@@ -74,3 +74,9 @@ Landing As screen:
         Y: =17
         ZIndex: =8
 
+    Label6 As label:
+        Text: ="Osca"
+        X: =689
+        Y: =17
+        ZIndex: =9
+
