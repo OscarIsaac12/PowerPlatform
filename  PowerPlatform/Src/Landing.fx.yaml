@@ -82,3 +82,9 @@ Landing As screen:
         Y: =72
         ZIndex: =9
 
+    Label11 As label:
+        Text: ="Oscar"
+        X: =663
+        Y: =17
+        ZIndex: =10
+
