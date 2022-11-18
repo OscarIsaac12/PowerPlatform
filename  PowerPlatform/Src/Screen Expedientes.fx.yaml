@@ -1,0 +1,1833 @@
+"'Screen Expedientes' As screen":
+    OnVisible: =Set(varPantalla,"Expedientes")
+
+    FormExpedientes As form:
+        DataSource: =Expedientes
+        DefaultMode: =FormMode.New
+        Height: =631
+        NumberOfColumns: =1
+        OnReset: =
+        OnSuccess: =ResetForm(FormExpedientes);ClearCollect(ColeccionExpedientes,Expedientes)
+        Width: =885
+        X: =392
+        Y: =28
+        ZIndex: =1
+
+        nom_exp_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="nom_exp"
+            Default: =ThisItem.nom_exp
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"nom_exp")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "nom_exp")
+            Required: =true
+            Update: =DataCardValue4.Text
+            Width: =885
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey4 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Nombre expediente"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue4 As text:
+                BorderColor: =RGBA(0, 119, 200, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                ZIndex: =2
+
+            ErrorMessage4 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue4.Y + DataCardValue4.Height
+                ZIndex: =3
+
+            StarVisible4 As label:
+                Align: =Align.Center
+                Height: =DataCardKey4.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey4.Y
+                ZIndex: =4
+
+        cod_sub_act_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="cod_sub_act"
+            Default: =ThisItem.cod_sub_act
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"cod_sub_act")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "cod_sub_act")
+            Required: =true
+            Update: =DataCardValue9.Selected.cod_sub_act
+            Width: =885
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey9 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Subactividad"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage9 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue9.Y + DataCardValue9.Height
+                ZIndex: =3
+
+            StarVisible9 As label:
+                Align: =Align.Center
+                Height: =DataCardKey9.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey9.Y
+                ZIndex: =4
+
+            DataCardValue9 As combobox:
+                BorderColor: =RGBA(0, 119, 200, 1)
+                DisplayFields: =["nom_sub_act"]
+                IsSearchable: =false
+                Items: =Filter(sub_actividad,cod_act = DataCardValue5.Selected.cod_act)
+                SearchFields: =["Title"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =44
+                ZIndex: =5
+
+        DataCard2 As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =200
+            Visible: =If(IsBlank(DataCardValue6.SelectedItems) || !(true in (DataCardValue6.SelectedItems.aprueba_solicitudes) ),false,true)
+            Width: =885
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            GaleriaRepresentada As gallery.galleryVertical:
+                BorderColor: =RGBA(0, 119, 200, 1)
+                BorderThickness: =1
+                Height: =133
+                Items: =ColeccionRepresentada
+                Layout: =Layout.Vertical
+                TemplateSize: =53
+                Width: =817
+                X: =31
+                Y: =52
+                ZIndex: =1
+
+                Label4 As label:
+                    Align: =Align.Center
+                    Height: =49
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    Size: =8
+                    Text: =ThisItem.Cedula
+                    Width: =60
+                    ZIndex: =1
+
+                Label4_1 As label:
+                    Align: =Align.Center
+                    Height: =49
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    Size: =8
+                    Text: =ThisItem.Primer_nombre
+                    Width: =100
+                    X: =78
+                    ZIndex: =2
+
+                Label4_2 As label:
+                    Align: =Align.Center
+                    Height: =49
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    Size: =8
+                    Text: =ThisItem.Segundo_nombre
+                    Width: =100
+                    X: =202
+                    ZIndex: =3
+
+                Label4_3 As label:
+                    Align: =Align.Center
+                    Height: =49
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    Size: =8
+                    Text: =ThisItem.Primer_apellido
+                    Width: =100
+                    X: =327
+                    ZIndex: =4
+
+                Label4_4 As label:
+                    Align: =Align.Center
+                    Height: =49
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    Size: =8
+                    Text: =ThisItem.Segundo_apellido
+                    Width: =100
+                    X: =447
+                    ZIndex: =5
+
+                Label4_5 As label:
+                    Align: =Align.Center
+                    Height: =49
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    Size: =8
+                    Text: =ThisItem.Correo
+                    Width: =104
+                    X: =573
+                    ZIndex: =6
+
+                Label4_6 As label:
+                    Align: =Align.Center
+                    Height: =49
+                    OnSelect: =Select(Parent)
+                    Size: =8
+                    Text: =ThisItem.Representada
+                    Width: =94
+                    X: =677
+                    ZIndex: =7
+
+                Icon4 As icon.Edit:
+                    Color: =RGBA(0, 119, 200, 1)
+                    Height: =19
+                    Icon: =Icon.Cancel
+                    OnSelect: |-
+                        =Patch(
+                                ColeccionRepresentada,
+                                ThisItem,
+                                {
+                                    Cedula: "",
+                                    Primer_nombre: "",
+                                    Segundo_nombre: "",
+                                    Primer_apellido: "",
+                                    Segundo_apellido: "",
+                                    Correo: "",
+                                    Representada: ""
+                                }
+                            )
+                    Width: =22
+                    X: =771
+                    Y: =19
+                    ZIndex: =8
+
+                Label7 As label:
+                    Align: =Align.Center
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =49
+                    OnSelect: |-
+                        =If(
+                            IsEmpty(
+                                GaleríaUsuarioExistente.AllItems
+                            ),
+                           
+                            UpdateContext(
+                                {
+                                    pantallarepresentates: true,
+                                    GaleriaRepresentadaSeleccionada: GaleriaRepresentada.Selected
+                                }
+                            ),
+                             UpdateContext(
+                                {
+                                    varPopUpRepresentadaExistente: true,
+                                    GaleriaRepresentadaSeleccionada: GaleriaRepresentada.Selected
+                                }
+                            )
+                        )
+                    Size: =8
+                    Text: ="Por favor agregar datos"
+                    Visible: =If(IsBlank(Label4.Text),true,false)
+                    Width: =805
+                    ZIndex: =9
+
+                Rectangle4 As rectangle:
+                    Fill: =RGBA(230, 230, 230, 1)
+                    Height: =1
+                    OnSelect: =Select(Parent)
+                    Width: =807
+                    Y: =52
+                    ZIndex: =10
+
+            Label5 As label:
+                Align: =Align.Center
+                Height: =36
+                Size: =10
+                Text: ="Primer nombre"
+                Width: =107
+                X: =107
+                Y: =16
+                ZIndex: =2
+
+            Label5_1 As label:
+                Align: =Align.Center
+                Height: =36
+                Size: =10
+                Text: ="Segundo nombre"
+                Width: =118
+                X: =224
+                Y: =16
+                ZIndex: =3
+
+            Label5_2 As label:
+                Align: =Align.Center
+                Height: =36
+                Size: =10
+                Text: ="Primer apellido"
+                Width: =107
+                X: =353
+                Y: =16
+                ZIndex: =4
+
+            Label5_3 As label:
+                Align: =Align.Center
+                Height: =36
+                Size: =10
+                Text: ="Segundo apellido"
+                Width: =118
+                X: =468
+                Y: =16
+                ZIndex: =5
+
+            Label5_4 As label:
+                Align: =Align.Center
+                Height: =36
+                Size: =10
+                Text: ="Cedula"
+                Width: =76
+                X: =31
+                Y: =16
+                ZIndex: =6
+
+            Label5_5 As label:
+                Align: =Align.Center
+                Height: =36
+                Size: =10
+                Text: ="Correo"
+                Width: =91
+                X: =600
+                Y: =16
+                ZIndex: =7
+
+            Label5_6 As label:
+                Align: =Align.Center
+                Height: =36
+                Size: =10
+                Text: ="Representada"
+                Width: =98
+                X: =705
+                Y: =16
+                ZIndex: =8
+
+        Consecutivo_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Consecutivo"
+            Default: =ThisItem.consecutivo
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"Consecutivo")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =//DataSourceInfo([@Expedientes]; DataSourceInfo.MaxLength; "Consecutivo")
+            Required: =false
+            Update: =DataCardValue2.Text
+            Visible: |-
+                =If(
+                    IsBlank(DataCardValue3.Selected) ||  IsBlank(DataCardValue5.Selected) || IsBlank(Concat(DataCardValue6.SelectedItems,cod_rep)) ,
+                    false,
+                    true
+                )
+            Width: =885
+            X: =0
+            Y: =6
+            ZIndex: =1
+
+            DataCardKey2 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: |-
+                    ="00" & If(
+                        Concat(
+                            SortByColumns(
+                                DataCardValue6.SelectedItems,
+                                "C_x00f3_digo"
+                            ),
+                            cod_rep,
+                            "_"
+                        ) in ColeccionExpedientes.rep_participantes
+                        And
+                        DataCardValue5.Selected.cod_act in  ColeccionExpedientes.cod_act
+                        ,
+                        LookUp(
+                            ColeccionExpedientes,
+                            Concat(
+                                SortByColumns(
+                                    DataCardValue6.SelectedItems,
+                                    "C_x00f3_digo"
+                                ),
+                                cod_rep,
+                                "_"
+                            ) = rep_participantes
+                        ).consecutivo + "1",
+                        "1"
+                    )
+                DelayOutput: =true
+                DisplayMode: =DisplayMode.View
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey2.Y + DataCardKey2.Height + 5
+                ZIndex: =2
+
+            ErrorMessage2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue2.Y + DataCardValue2.Height
+                ZIndex: =3
+
+            StarVisible2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey2.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey2.Y
+                ZIndex: =4
+
+        "'Nombre proceso_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Nombre_x0020_proceso"
+            Default: =ThisItem.nombre_proceso
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"Nombre_x0020_proceso")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "Nombre_x0020_proceso")
+            Required: =false
+            Update: =DataCardValue14.Text
+            Visible: =false
+            Width: =885
+            X: =0
+            Y: =7
+            ZIndex: =1
+
+            DataCardKey14 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue14 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =DataCardValue3.Selected.Nombre
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey14.Y + DataCardKey14.Height + 5
+                ZIndex: =2
+
+            ErrorMessage14 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue14.Y + DataCardValue14.Height
+                ZIndex: =3
+
+            StarVisible14 As label:
+                Align: =Align.Center
+                Height: =DataCardKey14.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey14.Y
+                ZIndex: =4
+
+        "'Nombre actividad_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Nombre_x0020_actividad"
+            Default: =ThisItem.nombre_actividad
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"Nombre_x0020_actividad")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "Nombre_x0020_actividad")
+            Required: =false
+            Update: =DataCardValue15.Text
+            Visible: =false
+            Width: =885
+            X: =0
+            Y: =8
+            ZIndex: =1
+
+            DataCardKey15 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue15 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =DataCardValue5.Selected.Nombre
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey15.Y + DataCardKey15.Height + 5
+                ZIndex: =2
+
+            ErrorMessage15 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue15.Y + DataCardValue15.Height
+                ZIndex: =3
+
+            StarVisible15 As label:
+                Align: =Align.Center
+                Height: =DataCardKey15.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey15.Y
+                ZIndex: =4
+
+        "'Nombre representada_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Nombre_x0020_representada"
+            Default: =ThisItem.nombre_representada
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"Nombre_x0020_representada")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "Nombre_x0020_representada")
+            Required: =false
+            Update: =DataCardValue17.Text
+            Visible: =false
+            Width: =885
+            X: =0
+            Y: =9
+            ZIndex: =1
+
+            DataCardKey17 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue17 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: |-
+                    =Concat(
+                        SortByColumns(DataCardValue6.SelectedItems,"C_x00f3_digo") ,
+                        nombre_rep,
+                        "-"
+                    )
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey17.Y + DataCardKey17.Height + 5
+                ZIndex: =2
+
+            ErrorMessage17 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue17.Y + DataCardValue17.Height
+                ZIndex: =3
+
+            StarVisible17 As label:
+                Align: =Align.Center
+                Height: =DataCardKey17.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey17.Y
+                ZIndex: =4
+
+        DataCard1 As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =200
+            Width: =885
+            X: =0
+            Y: =10
+            ZIndex: =1
+
+            AdjuntoExpediente As attachments:
+                BorderColor: =
+                Height: =150
+                IsInDataCard: =true
+                Items: =Blank()
+                MaxAttachments: |-
+                    =//Pendiente por saber los numeros por flujos
+                    2
+                MaxAttachmentSize: =20
+                NoAttachmentsText: ="No hay documentos adjuntos."
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                Tooltip: =
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =30
+                ZIndex: =1
+
+        coment_solicit_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="coment_solicit"
+            Default: =ThisItem.coment_solicit
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"coment_solicit")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =141
+            MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "coment_solicit")
+            Required: =true
+            Update: =DataCardValue12.Text
+            Width: =885
+            X: =0
+            Y: =11
+            ZIndex: =1
+
+            DataCardKey12 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Comentarios adicionales"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue12 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =80
+                MaxLength: =Parent.MaxLength
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey12.Y + DataCardKey12.Height + 5
+                ZIndex: =2
+
+            ErrorMessage12 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue12.Y + DataCardValue12.Height
+                ZIndex: =3
+
+            StarVisible12 As label:
+                Align: =Align.Center
+                Height: =DataCardKey12.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey12.Y
+                ZIndex: =4
+
+        cod_exp_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="cod_exp"
+            Default: =ThisItem.cod_exp
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"cod_exp")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "cod_exp")
+            Required: =false
+            Update: =DataCardValue7.Text
+            Visible: =false
+            Width: =885
+            X: =0
+            Y: =12
+            ZIndex: =1
+
+            DataCardKey7 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue7 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: |-
+                    ="COL" & "-2022" & "-" & DataCardValue3.Selected.sigla & "-" & DataCardValue5.Selected.cod_act & "-" & Substitute(
+                         Concat(
+                            SortByColumns(
+                                DataCardValue6.SelectedItems,
+                                "C_x00f3_digo"
+                            ),
+                            cod_rep,
+                            "_"
+                        ),
+                        "_",
+                        "_"
+                    ) & "-" & DataCardValue2.Text & ""
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                ZIndex: =2
+
+            ErrorMessage7 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue7.Y + DataCardValue7.Height
+                ZIndex: =3
+
+            StarVisible7 As label:
+                Align: =Align.Center
+                Height: =DataCardKey7.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey7.Y
+                ZIndex: =4
+
+        ex_guid_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ex_guid"
+            Default: =ThisItem.ex_guid
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"ex_guid")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "ex_guid")
+            Required: =false
+            Update: =DataCardValue8.Text
+            Visible: =false
+            Width: =885
+            X: =0
+            Y: =14
+            ZIndex: =1
+
+            DataCardKey8 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue8 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =GUID()
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                ZIndex: =2
+
+            ErrorMessage8 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue8.Y + DataCardValue8.Height
+                ZIndex: =3
+
+            StarVisible8 As label:
+                Align: =Align.Center
+                Height: =DataCardKey8.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey8.Y
+                ZIndex: =4
+
+        nom_colab_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="nom_colab"
+            Default: =ThisItem.nom_colab
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"nom_colab")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "nom_colab")
+            Required: =false
+            Update: =DataCardValue10.Text
+            Visible: =false
+            Width: =885
+            X: =0
+            Y: =15
+            ZIndex: =1
+
+            DataCardKey10 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue10 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =varMyNa
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey10.Y + DataCardKey10.Height + 5
+                ZIndex: =2
+
+            ErrorMessage10 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue10.Y + DataCardValue10.Height
+                ZIndex: =3
+
+            StarVisible10 As label:
+                Align: =Align.Center
+                Height: =DataCardKey10.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey10.Y
+                ZIndex: =4
+
+        Proceso_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Proceso"
+            Default: =ThisItem.proceso
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"Proceso")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "Proceso")
+            Required: =false
+            Update: =DataCardValue3.Selected.sigla
+            Visible: =false
+            Width: =885
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            DataCardKey3 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage3 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue3.Y + DataCardValue3.Height
+                ZIndex: =3
+
+            StarVisible3 As label:
+                Align: =Align.Center
+                Height: =DataCardKey3.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey3.Y
+                ZIndex: =4
+
+            DataCardValue3 As combobox:
+                BorderColor: =RGBA(0, 119, 200, 1)
+                DisplayFields: =["Title"]
+                Height: =42
+                IsSearchable: =false
+                Items: =Proceso
+                SearchFields: =["Title"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =44
+                ZIndex: =5
+
+        Actividad_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Actividad"
+            Default: =ThisItem.cod_act
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"Actividad")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "Actividad")
+            Required: =true
+            Update: =DataCardValue5.Selected.cod_act
+            Width: =885
+            X: =0
+            Y: =2
+            ZIndex: =2
+
+            DataCardKey5 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Actividad"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage5 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue5.Y + DataCardValue5.Height
+                ZIndex: =3
+
+            StarVisible5 As label:
+                Align: =Align.Center
+                Height: =DataCardKey5.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey5.Y
+                ZIndex: =4
+
+            DataCardValue5 As combobox:
+                BorderColor: =RGBA(0, 119, 200, 1)
+                DisplayFields: =["Title"]
+                IsSearchable: =false
+                Items: =Actividad
+                SearchFields: =["Title"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =46
+                ZIndex: =5
+
+        Representada_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Representada"
+            Default: =ThisItem.rep_participantes
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"Representada")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "Representada")
+            Required: =true
+            Update: |-
+                =Concat(
+                    SortByColumns(DataCardValue6.SelectedItems,"C_x00f3_digo") ,
+                    cod_rep,
+                    "_"
+                )
+            Width: =885
+            X: =0
+            Y: =4
+            ZIndex: =2
+
+            DataCardKey6 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Representada"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage6 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue6.Y + DataCardValue6.Height
+                ZIndex: =3
+
+            StarVisible6 As label:
+                Align: =Align.Center
+                Height: =DataCardKey6.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey6.Y
+                ZIndex: =4
+
+            DataCardValue6 As combobox:
+                BorderColor: =RGBA(0, 119, 200, 1)
+                DisplayFields: =["Title"]
+                IsSearchable: =false
+                Items: =Representadas
+                OnChange: |
+                    =Clear(ColeccionRepresentada);
+                    ForAll(
+                        Sequence(
+                            Value(
+                                CountRows(
+                                    Filter(
+                                        DataCardValue6.SelectedItems,
+                                        true = aprueba_solicitudes 
+                                    )
+                                )
+                            )
+                        ),
+                        Collect(
+                            ColeccionRepresentada,
+                            {
+                                Cedula: "",
+                                Primer_nombre: "",
+                                Segundo_nombre: "",
+                                Primer_apellido: "",
+                                Segundo_apellido: "",
+                                Correo: "",
+                                Representada: "",
+                                Numero: CountRows(ColeccionRepresentada) + 1
+                            }
+                        ))
+                    ;
+                SearchFields: =["Title"]
+                SearchItems: =[]
+                Width: =775
+                X: =30
+                Y: =44
+                ZIndex: =5
+
+            Icon7 As icon.Reset:
+                Height: =40
+                Icon: =Icon.Reload
+                OnSelect: =Reset(DataCardValue6)
+                Width: =33
+                X: =822
+                Y: =44
+                ZIndex: =6
+
+        Lote_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.lote
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "Title")
+            Required: =true
+            Update: =DataCardValue1.Text
+            Visible: =false
+            Width: =885
+            X: =0
+            Y: =13
+            ZIndex: =2
+
+            DataCardKey1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: |-
+                    =//Last(ColeccionExpedientes).Title
+                    If(varTotalExpedientes = 1990,varUltimoLote + 1,varUltimoLote)
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =41
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                ZIndex: =2
+
+            ErrorMessage1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue1.Y + DataCardValue1.Height
+                ZIndex: =3
+
+            StarVisible1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey1.Y
+                ZIndex: =4
+
+    CrearExpediente As button:
+        Fill: =RGBA(0, 119, 200, 1)
+        Height: =66
+        OnSelect: |-
+            =Set(
+                varSigla,
+                DataCardValue7.Text
+            );
+            Creaciondeexpediente.Run(
+                DataCardValue3.Selected.sigla,
+                DataCardValue5.Selected.cod_act,
+                //DataCardValue4.Selected.Sigla;
+                Concat(
+                    SortByColumns(
+                        DataCardValue6.SelectedItems,
+                        "C_x00f3_digo"
+                    ),
+                    cod_rep,
+                    "_"
+                ),
+                DataCardValue2.Text,
+                DataCardValue7.Text,
+                    JSON(ColeccionRepresentada),
+                DataCardValue4.Text,
+                DataCardValue8.Text
+            );
+            ForAll(
+                AdjuntoExpediente.Attachments As Document,
+                Flujosubidadedocumentos.Run(
+                    {
+                        contentBytes: Document.Value,
+                        name: Document.Name
+                    },
+                    "COL" & "/2022" & "/" & DataCardValue3.Selected.sigla & "/" & DataCardValue5.Selected.cod_act & "/" & Substitute(
+                        Concat(
+                            SortByColumns(
+                                DataCardValue6.SelectedItems,
+                                "C_x00f3_digo"
+                            ),
+                            cod_rep,
+                            "_"
+                        ),
+                        "_",
+                        "/"
+                    ) & "/" & varSigla,
+                    varSigla
+                )
+            );
+            /*
+            ForAll(
+                ColeccionRepresentada;
+                If(!(Cedula in invitados.ced_inv);
+                Patch(
+                    invitados;
+                    Defaults(invitados);
+                    {
+                        ced_inv: Cedula;
+                        pri_nom_inv: Primer_nombre;
+                        seg_nom_inv: Segundo_nombre;
+                        pri_ape_inv: Primer_apellido;
+                        sec_ape_inv: Segundo_apellido;
+                        email_inv: Correo;
+                        cod_rep_invitados: Representada;
+                        status_inv: "activo"
+                    }
+                ))
+            )
+            
+            ;;*/
+            SubmitForm(FormExpedientes)
+        RadiusBottomLeft: =2
+        RadiusBottomRight: =2
+        RadiusTopLeft: =2
+        RadiusTopRight: =2
+        Text: ="Crear expediente"
+        Width: =688
+        X: =490
+        Y: =683
+        ZIndex: =2
+
+    Icon1 As icon.ChevronLeft:
+        Height: =34
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(Landing,Fade)
+        Width: =31
+        X: =11
+        Y: =14
+        ZIndex: =3
+
+    Menu_2 As Menu:
+        ZIndex: =4
+
+    Label1_2 As label:
+        Height: =53
+        Text: |-
+            ="COL" & "/2022" & "/" & DataCardValue3.Selected.sigla & "/" & DataCardValue5.Selected.cod_act & "/" & Substitute(
+                 Concat(
+                    SortByColumns(
+                        DataCardValue6.SelectedItems,
+                        "C_x00f3_digo"
+                    ),
+                    cod_rep,
+                    "_"
+                ),
+                "_",
+                "/"
+            ) & "/" 
+        Width: =227
+        X: =53
+        Y: =630
+        ZIndex: =5
+
+    Label1_3 As label:
+        Height: =53
+        Text: |-
+            ="COL" & "-2022" & "-" & DataCardValue3.Selected.sigla & "-" & DataCardValue5.Selected.cod_act & "-" & Substitute(
+                 Concat(
+                    SortByColumns(
+                        DataCardValue6.SelectedItems,
+                        "C_x00f3_digo"
+                    ),
+                    cod_rep,
+                    "_"
+                ),
+                "_",
+                "_"
+            ) & "-" & DataCardValue2.Text & " "
+        Width: =227
+        X: =53
+        Y: =683
+        ZIndex: =6
+
+    PantallaCrearRepresentante As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =12
+
+        Rectangle2 As rectangle:
+            Fill: =RGBA(149, 149, 149, 0.5)
+            Height: =768
+            Visible: =pantallarepresentates
+            Width: =1366
+            ZIndex: =7
+
+        Rectangle3 As rectangle:
+            BorderColor: =RGBA(0, 119, 200, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =511
+            Visible: =pantallarepresentates
+            Width: =650
+            X: =435
+            Y: =140
+            ZIndex: =8
+
+        Container4 As groupContainer.horizontalAutoLayoutContainer:
+            Height: =425
+            LayoutGap: =10
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Visible: =pantallarepresentates
+            Width: =641
+            X: =456
+            Y: =153
+            ZIndex: =9
+
+            Label9 As label:
+                Overflow: =Overflow.Scroll
+                Text: ="Cedula"
+                Width: =500
+                ZIndex: =1
+
+            TextInput3 As text:
+                BorderColor: =RGBA(0, 119, 200, 1)
+                Default: =
+                HoverBorderColor: =RGBA(0, 119, 200, 1)
+                HoverFill: =RGBA(0, 119, 200, 0.23)
+                Width: =280
+                ZIndex: =3
+
+            Label10 As label:
+                Text: =""
+                Width: =60
+                ZIndex: =4
+
+            Label9_2 As label:
+                Overflow: =Overflow.Scroll
+                Text: ="Primer nombre"
+                Width: =300
+                ZIndex: =6
+
+            Label9_3 As label:
+                Overflow: =Overflow.Scroll
+                Text: ="Segundo nombre"
+                Width: =300
+                ZIndex: =7
+
+            TextInput3_2 As text:
+                BorderColor: =RGBA(0, 119, 200, 1)
+                Default: =
+                HoverBorderColor: =RGBA(0, 119, 200, 1)
+                HoverFill: =RGBA(0, 119, 200, 0.2)
+                Width: =280
+                ZIndex: =8
+
+            Label10_1 As label:
+                Text: =""
+                Width: =20
+                ZIndex: =9
+
+            TextInput3_3 As text:
+                BorderColor: =RGBA(0, 119, 200, 1)
+                Default: =
+                HoverBorderColor: =RGBA(0, 119, 200, 1)
+                HoverFill: =RGBA(0, 119, 200, 0.2)
+                Width: =280
+                ZIndex: =10
+
+            Label9_4 As label:
+                Overflow: =Overflow.Scroll
+                Text: ="Primer apellido"
+                Width: =300
+                ZIndex: =11
+
+            Label9_5 As label:
+                Overflow: =Overflow.Scroll
+                Text: ="Segundo apellido"
+                Width: =300
+                ZIndex: =12
+
+            TextInput3_4 As text:
+                BorderColor: =RGBA(0, 119, 200, 1)
+                Default: =
+                HoverBorderColor: =RGBA(0, 119, 200, 1)
+                HoverFill: =RGBA(0, 119, 200, 0.2)
+                Width: =280
+                ZIndex: =13
+
+            Label10_2 As label:
+                Text: =""
+                Width: =20
+                ZIndex: =14
+
+            TextInput3_5 As text:
+                BorderColor: =RGBA(0, 119, 200, 1)
+                Default: =
+                HoverBorderColor: =RGBA(0, 119, 200, 1)
+                HoverFill: =RGBA(0, 119, 200, 0.2)
+                Width: =280
+                ZIndex: =15
+
+            Label9_6 As label:
+                Overflow: =Overflow.Scroll
+                Text: ="Correo"
+                Width: =300
+                ZIndex: =16
+
+            Label9_7 As label:
+                Overflow: =Overflow.Scroll
+                Text: ="Representada"
+                Width: =320
+                ZIndex: =17
+
+            TextInput3_6 As text:
+                BorderColor: =RGBA(0, 119, 200, 1)
+                Default: =
+                HoverBorderColor: =RGBA(0, 119, 200, 1)
+                HoverFill: =RGBA(0, 119, 200, 0.2)
+                Width: =280
+                ZIndex: =18
+
+            Label10_3 As label:
+                Text: =""
+                Width: =20
+                ZIndex: =19
+
+            TextInput3_7 As combobox:
+                BorderColor: =RGBA(0, 119, 200, 1)
+                ChevronBackground: =RGBA(0, 119, 200, 1)
+                DisplayFields: =["Title"]
+                IsSearchable: =false
+                Items: =Filter(DataCardValue6.SelectedItems,!(nombre_rep in ColeccionRepresentada.Representada) And true = aprueba_solicitudes)
+                OnChange: =
+                SearchFields: =["Title"]
+                SearchItems: =[]
+                SelectionFill: =RGBA(0, 119, 200, 1)
+                SelectMultiple: =false
+                Width: =280
+                X: =30
+                Y: =44
+                ZIndex: =21
+
+        CrearRepresentada As button:
+            Fill: =RGBA(0, 119, 200, 1)
+            Height: =47
+            OnSelect: |
+                =If(
+                    IsBlank(TextInput3.Text) And IsBlank(TextInput3_2.Text) And IsBlank(TextInput3_3.Text) And IsBlank(TextInput3_4.Text) And IsBlank(TextInput3_5.Text) And IsBlank(TextInput3_6.Text) And IsBlank(TextInput3_7.Selected),
+                    Notify(
+                        "Por favor completar todos los datos",
+                        NotificationType.Warning,
+                        3
+                    ),
+                    UpdateContext({varGuardarRepresentada:true})
+                );
+                If(varGuardarRepresentada = true,
+                Patch(
+                        ColeccionRepresentada,
+                        GaleriaRepresentadaSeleccionada,
+                        {
+                            Cedula: TextInput3.Text,
+                            Primer_nombre: TextInput3_2.Text,
+                            Segundo_nombre: TextInput3_3.Text,
+                            Primer_apellido: TextInput3_4.Text,
+                            Segundo_apellido: TextInput3_5.Text,
+                            Correo: TextInput3_6.Text,
+                            Representada: TextInput3_7.Selected.nombre_rep
+                        }
+                    ));
+                If(varGuardarRepresentada = true,
+                Concurrent(
+                    UpdateContext({pantallarepresentates: false}),
+                    Reset(TextInput3),
+                    Reset(TextInput3_2),
+                    Reset(TextInput3_3),
+                    Reset(TextInput3_4),
+                    Reset(TextInput3_5),
+                    Reset(TextInput3_6),
+                    Reset(TextInput3_7)
+                ));
+            RadiusBottomLeft: =2
+            RadiusBottomRight: =2
+            RadiusTopLeft: =2
+            RadiusTopRight: =2
+            Text: ="Guardar"
+            Visible: =pantallarepresentates
+            Width: =215
+            X: =771
+            Y: =583
+            ZIndex: =10
+
+        CancelarRepresentada As button:
+            Fill: =ColorFade(RGBA(0, 119, 200, 1), 30%)
+            Height: =47
+            OnSelect: |-
+                =Concurrent(
+                    UpdateContext({pantallarepresentates: false}),
+                    Reset(TextInput3),
+                    Reset(TextInput3_2),
+                    Reset(TextInput3_3),
+                    Reset(TextInput3_4),
+                    Reset(TextInput3_5),
+                    Reset(TextInput3_6),
+                    Reset(TextInput3_7)
+                )
+            RadiusBottomLeft: =2
+            RadiusBottomRight: =2
+            RadiusTopLeft: =2
+            RadiusTopRight: =2
+            Text: ="Cancelar"
+            Visible: =pantallarepresentates
+            Width: =215
+            X: =533
+            Y: =583
+            ZIndex: =11
+
+    PopUpRepresentadaExistente As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =18
+
+        Rectangle2_1 As rectangle:
+            Fill: =RGBA(149, 149, 149, 0.5)
+            Height: =768
+            Visible: =varPopUpRepresentadaExistente
+            Width: =1366
+            ZIndex: =13
+
+        Rectangle3_1 As rectangle:
+            BorderColor: =RGBA(0, 119, 200, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =414
+            Visible: =varPopUpRepresentadaExistente
+            Width: =650
+            X: =435
+            Y: =140
+            ZIndex: =14
+
+        Container4_1 As groupContainer.horizontalAutoLayoutContainer:
+            Height: =310
+            LayoutGap: =10
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Visible: =varPopUpRepresentadaExistente
+            Width: =609
+            X: =456
+            Y: =153
+            ZIndex: =15
+
+            GaleríaUsuarioExistente As gallery.galleryVertical:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Height: =250
+                Items: |-
+                    =//invitados
+                     Filter(invitados,status_inv = "activo" And  cod_rep_invitados in DataCardValue6.SelectedItems.nombre_rep And 
+                     Not(cod_rep_invitados in ColeccionRepresentada.Representada) )
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =600
+                TemplateSize: =40
+                Width: =600
+                ZIndex: =1
+
+                Label8 As label:
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: =ThisItem.ced_inv
+                    Width: =120
+                    X: =9
+                    ZIndex: =1
+
+                Label8_1 As label:
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: =ThisItem.pri_nom_inv & " " & ThisItem.seg_nom_inv & " " & ThisItem.pri_ape_inv & " " & ThisItem.sec_ape_inv
+                    Width: =306
+                    X: =129
+                    ZIndex: =2
+
+                Icon6 As icon.Check:
+                    Height: =40
+                    Icon: =Icon.Check
+                    OnSelect: |-
+                        =UpdateContext({varPopUpRepresentadaExistente:false});
+                        Patch(
+                                ColeccionRepresentada,
+                                GaleriaRepresentadaSeleccionada,
+                                {
+                                    Cedula: ThisItem.ced_inv,
+                                    Primer_nombre: ThisItem.pri_nom_inv,
+                                    Segundo_nombre: ThisItem.seg_nom_inv,
+                                    Primer_apellido: ThisItem.pri_ape_inv,
+                                    Segundo_apellido: ThisItem.sec_ape_inv,
+                                    Correo: ThisItem.email_inv,
+                                    Representada: ThisItem.cod_rep_invitados
+                                }
+                            )
+                    Width: =29
+                    X: =561
+                    ZIndex: =3
+
+                Label8_2 As label:
+                    OnSelect: =Select(Parent)
+                    Size: =10
+                    Text: =ThisItem.cod_rep_invitados
+                    Width: =111
+                    X: =435
+                    ZIndex: =4
+
+            Label9_1 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Overflow: =Overflow.Scroll
+                Text: ="Agregar a un usuario existente"
+                Width: =600
+                ZIndex: =1
+
+            Label10_4 As label:
+                Text: =""
+                Width: =60
+                ZIndex: =4
+
+            Label10_5 As label:
+                Text: =""
+                Width: =20
+                ZIndex: =9
+
+            Label10_6 As label:
+                Text: =""
+                Width: =20
+                ZIndex: =14
+
+            Label10_7 As label:
+                Text: =""
+                Width: =20
+                ZIndex: =19
+
+        CancelarRepresentada_1 As button:
+            Fill: =ColorFade(RGBA(0, 119, 200, 1), 30%)
+            Height: =47
+            OnSelect: |-
+                =UpdateContext({varPopUpRepresentadaExistente:false})
+            RadiusBottomLeft: =2
+            RadiusBottomRight: =2
+            RadiusTopLeft: =2
+            RadiusTopRight: =2
+            Text: ="Cancelar"
+            Visible: =varPopUpRepresentadaExistente
+            Width: =215
+            X: =653
+            Y: =479
+            ZIndex: =17
+

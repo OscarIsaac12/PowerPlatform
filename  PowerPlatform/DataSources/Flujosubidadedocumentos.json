@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "faa27b4c-a825-4582-a122-a329fec37aa4",
+    "Name": "Flujosubidadedocumentos",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "6c3691df-9254-ed11-9561-002248370e3e"
+  }
+]

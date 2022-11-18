@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "55bb6b3d-6c97-430b-a029-a19172edd307",
+    "Name": "Creaciondeexpediente",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "edddd60c-a651-ed11-bba3-002248370e3e"
+  }
+]

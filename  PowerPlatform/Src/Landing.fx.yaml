@@ -1,0 +1,76 @@
+Landing As screen:
+    Fill: =RGBA(248, 248, 248, 1)
+    OnVisible: =Set(varPantalla,"Home")
+
+    Menu_1 As Menu:
+        ZIndex: =2
+
+    Container1 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =605
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =906
+        X: =381
+        Y: =136
+        ZIndex: =3
+
+    Icon2 As icon.ChevronDown:
+        Height: =42
+        Icon: =Icon.Hamburger
+        Width: =55
+        X: =313
+        Y: =17
+        ZIndex: =4
+
+    Label2 As label:
+        FontWeight: =FontWeight.Semibold
+        Size: =18
+        Text: ="App Documentación"
+        Width: =282
+        X: =381
+        Y: =19
+        ZIndex: =5
+
+    Container2 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =30
+        LayoutGap: =10
+        LayoutMode: =LayoutMode.Auto
+        X: =381
+        Y: =82
+        ZIndex: =6
+
+        Icon3 As icon.Home:
+            Height: =25
+            Icon: =Icon.Home
+            Width: =25
+            ZIndex: =1
+
+        Label3 As label:
+            Align: =Align.Center
+            Height: =30
+            Text: ="Home"
+            Width: =60
+            ZIndex: =2
+
+    Label2_1 As label:
+        FontWeight: =FontWeight.Semibold
+        Size: =9
+        Text: =varMyNa
+        Width: =264
+        X: =1074
+        Y: =19
+        ZIndex: =7
+
+    Image4 As image:
+        Height: =42
+        Image: =varMyphoto
+        RadiusBottomLeft: =1000
+        RadiusBottomRight: =1000
+        RadiusTopLeft: =1000
+        RadiusTopRight: =1000
+        Width: =44
+        X: =1016
+        Y: =17
+        ZIndex: =8
+

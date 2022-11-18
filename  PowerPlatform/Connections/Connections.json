@@ -1,0 +1,218 @@
+{
+  "6cfb50c6-29b6-4a35-90d8-fdf775c80fea": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-02.brazilsouth.logic.azure.com:443/workflows/812d0eeb0c914fc6a03dac85aa9e3299/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=_kQ-8MovQM3ye8hmpfqQ4tztRohPHUlC8EqcHjj9PoE",
+      "workflowEndpoint": "/subscriptions/2e6e5a0a-b35f-4167-82de-61b3afa7d1ec/resourceGroups/bb8d2985292f4f6bb404e6cf35ecd4bf-5777c7badb41ebd1bb56be6a98dc66e4-env/providers/Microsoft.Logic/workflows/832e12bd-a029-0b4a-2aa6-26daa36c3a44",
+      "workflowEntityId": "edddd60c-a651-ed11-bba3-002248370e3e",
+      "workflowName": "832e12bd-a029-0b4a-2aa6-26daa36c3a44",
+      "workflowPath": "/subscriptions/2e6e5a0a-b35f-4167-82de-61b3afa7d1ec/resourceGroups/bb8d2985292f4f6bb404e6cf35ecd4bf-5777c7badb41ebd1bb56be6a98dc66e4-env/providers/Microsoft.Logic/workflows/832e12bd-a029-0b4a-2aa6-26daa36c3a44"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Flujos lógicos",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "9a2dbd94-e577-4b86-b3a4-2e86d692d933": {
+          "value": "shared_excelonlinebusiness"
+        },
+        "ea309140-c7cb-4ff8-8cae-ad9e782c057e": {
+          "value": "shared_approvals"
+        },
+        "f2dc6240-7947-4874-b5ce-12ccf906cece": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {
+          "value": "edddd60c-a651-ed11-bba3-002248370e3e"
+        },
+        "workflowName": {
+          "value": "832e12bd-a029-0b4a-2aa6-26daa36c3a44"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_approvals": {
+          "value": "ea309140-c7cb-4ff8-8cae-ad9e782c057e"
+        },
+        "shared_excelonlinebusiness": {
+          "value": "9a2dbd94-e577-4b86-b3a4-2e86d692d933"
+        },
+        "shared_sharepointonline": {
+          "value": "f2dc6240-7947-4874-b5ce-12ccf906cece"
+        },
+        "workflowEntityId": {
+          "value": "edddd60c-a651-ed11-bba3-002248370e3e"
+        },
+        "workflowName": {
+          "value": "832e12bd-a029-0b4a-2aa6-26daa36c3a44"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Creaciondeexpediente"
+    ],
+    "dependencies": {
+      "shared_approvals": "ea309140-c7cb-4ff8-8cae-ad9e782c057e",
+      "shared_excelonlinebusiness": "9a2dbd94-e577-4b86-b3a4-2e86d692d933",
+      "shared_sharepointonline": "f2dc6240-7947-4874-b5ce-12ccf906cece"
+    },
+    "dependents": [],
+    "id": "6cfb50c6-29b6-4a35-90d8-fdf775c80fea"
+  },
+  "9a2dbd94-e577-4b86-b3a4-2e86d692d933": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel Online (Empresas)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1600/1.0.1600.3026/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "6cfb50c6-29b6-4a35-90d8-fdf775c80fea"
+    ],
+    "id": "9a2dbd94-e577-4b86-b3a4-2e86d692d933"
+  },
+  "cb244305-dd2f-4c9c-93fa-3d5818e9dd40": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-15.brazilsouth.logic.azure.com:443/workflows/d16c9092c8c04c47a39916aa01bfc9c3/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=kjTo5KPu7ha35MFrL0NMOvXb66Ix5__HglkJm-O0cpw",
+      "workflowEndpoint": "/subscriptions/2e6e5a0a-b35f-4167-82de-61b3afa7d1ec/resourceGroups/bb8d2985292f4f6bb404e6cf35ecd4bf-5777c7badb41ebd1bb56be6a98dc66e4-env/providers/Microsoft.Logic/workflows/d9e026f1-cc44-2e6d-2b0e-aca7cb861cd7",
+      "workflowEntityId": "6c3691df-9254-ed11-9561-002248370e3e",
+      "workflowName": "d9e026f1-cc44-2e6d-2b0e-aca7cb861cd7",
+      "workflowPath": "/subscriptions/2e6e5a0a-b35f-4167-82de-61b3afa7d1ec/resourceGroups/bb8d2985292f4f6bb404e6cf35ecd4bf-5777c7badb41ebd1bb56be6a98dc66e4-env/providers/Microsoft.Logic/workflows/d9e026f1-cc44-2e6d-2b0e-aca7cb861cd7"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Flujos lógicos",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "f2dc6240-7947-4874-b5ce-12ccf906cece": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {
+          "value": "6c3691df-9254-ed11-9561-002248370e3e"
+        },
+        "workflowName": {
+          "value": "d9e026f1-cc44-2e6d-2b0e-aca7cb861cd7"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "f2dc6240-7947-4874-b5ce-12ccf906cece"
+        },
+        "workflowEntityId": {
+          "value": "6c3691df-9254-ed11-9561-002248370e3e"
+        },
+        "workflowName": {
+          "value": "d9e026f1-cc44-2e6d-2b0e-aca7cb861cd7"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Flujosubidadedocumentos"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "f2dc6240-7947-4874-b5ce-12ccf906cece"
+    },
+    "dependents": [],
+    "id": "cb244305-dd2f-4c9c-93fa-3d5818e9dd40"
+  },
+  "ea309140-c7cb-4ff8-8cae-ad9e782c057e": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Aprobaciones",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1599/1.0.1599.3017/approvals/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_approvals",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "6cfb50c6-29b6-4a35-90d8-fdf775c80fea"
+    ],
+    "id": "ea309140-c7cb-4ff8-8cae-ad9e782c057e"
+  },
+  "f2dc6240-7947-4874-b5ce-12ccf906cece": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1610-greyhound-localization-RelayFix/1.0.1610.3091/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://axonpharma.sharepoint.com/sites/Gestor_Documental_Desarrollo": {
+        "datasetOverride": {
+          "environmentVariableName": "bext_varSharepoint"
+        },
+        "dataSources": {
+          "Actividad": {
+            "tableName": "a60c8a75-fe34-47d0-ad8c-0843d36741fd"
+          },
+          "Documentos": {
+            "tableName": "2bb54938-1133-4b02-80bd-bbc6a57726d5"
+          },
+          "Documentos_1": {
+            "tableName": "2bb54938-1133-4b02-80bd-bbc6a57726d5"
+          },
+          "Expedientes": {
+            "tableName": "2212d82d-e7ba-4dde-bb36-60ec83a525b4"
+          },
+          "invitados": {
+            "tableName": "80657944-3b95-4f41-9c8d-3ccb1fd8c715"
+          },
+          "materiales ERP": {
+            "tableName": "60ea8cac-5034-4cc9-996d-e8e82df9f1cd"
+          },
+          "Proceso": {
+            "tableName": "940f936e-e048-4e3b-8a34-3b75635a5b6b"
+          },
+          "Representadas": {
+            "tableName": "14a7a41f-baba-4cf5-800b-3b49483846ca"
+          },
+          "sub_actividad": {
+            "tableName": "8e919239-70e4-46b3-8a81-e99e5192b113"
+          },
+          "Tipo de documento": {
+            "tableName": "37b58e46-8459-4537-ba96-18c12bbc300d"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Expedientes",
+      "Proceso",
+      "Tipo de documento",
+      "Actividad",
+      "Representadas",
+      "Documentos",
+      "Documentos_1",
+      "sub_actividad",
+      "invitados",
+      "materiales ERP"
+    ],
+    "dependencies": {},
+    "dependents": [
+      "cb244305-dd2f-4c9c-93fa-3d5818e9dd40",
+      "6cfb50c6-29b6-4a35-90d8-fdf775c80fea"
+    ],
+    "id": "f2dc6240-7947-4874-b5ce-12ccf906cece"
+  }
+}

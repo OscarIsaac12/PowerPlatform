@@ -1,0 +1,83 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =//ClearCollect(ColeccionExpedientes;Expedientes)
+        Set(
+            Carga,
+            true
+        );
+        ClearCollect(
+            Lotes,
+            [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18",
+                "19"
+            ]
+        );
+        ClearCollect(
+            PrimeraColleccion,
+            ForAll(
+                Lotes,
+                Filter(
+                    Expedientes,
+                    lote = Value
+                )
+            )
+        );
+        ClearCollect(
+            ColeccionExpedientes,
+            Ungroup(
+                Filter(
+                    PrimeraColleccion,
+                    !IsEmpty(Value)
+                ),
+                "Value"
+            )
+        );
+        Set(
+            Carga,
+            false
+        );
+        Concurrent(
+            Set(
+                varTotalExpedientes,
+                CountRows(ColeccionExpedientes)
+            ),
+            Set(
+                varUltimoLote,
+                Last(ColeccionExpedientes).lote
+            )
+        );
+        Set(
+            varMenu,
+            Table(
+                {Nombre: "Home",
+                Linkk: Landing},
+                {Nombre: "Expedientes",
+                Linkk: 'Screen Expedientes'},
+                {Nombre: "Lista de procesos",
+                Linkk: Landing},
+                {Nombre: "Administración",
+                Linkk: Landing}
+            )
+        );
+        Set(varMyNa,User().FullName);
+        Set(varMyphoto,User().Image)
+    StartScreen: =
+
