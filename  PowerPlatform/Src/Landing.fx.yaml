@@ -75,8 +75,10 @@ Landing As screen:
         ZIndex: =8
 
     Label6 As label:
-        Text: ="Osca"
-        X: =689
-        Y: =17
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Text: ="Felipe"
+        X: =902
+        Y: =72
         ZIndex: =9
 
