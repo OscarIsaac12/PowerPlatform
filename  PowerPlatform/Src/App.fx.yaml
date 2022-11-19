@@ -2,6 +2,17 @@ App As appinfo:
     BackEnabled: =false
     OnStart: |-
         =//ClearCollect(ColeccionExpedientes;Expedientes)
+        If(
+            Not(IsBlank(Param("Guid"))),
+            Set(
+                exp_guid,
+                Param("Guid")
+            ),
+            Set(
+                exp_act,
+                Param("Actividad")
+            )
+        );
         Set(
             Carga,
             true
@@ -67,17 +78,36 @@ App As appinfo:
         Set(
             varMenu,
             Table(
-                {Nombre: "Home",
-                Linkk: Landing},
-                {Nombre: "Expedientes",
-                Linkk: 'Screen Expedientes'},
-                {Nombre: "Lista de procesos",
-                Linkk: Landing},
-                {Nombre: "Administración",
-                Linkk: Landing}
+                {
+                    Nombre: "Home",
+                    Linkk: Landing
+                },
+                {
+                    Nombre: "Expedientes",
+                    Linkk: 'Screen Expedientes'
+                },
+                {
+                    Nombre: "Lista de procesos",
+                    Linkk: Landing
+                },
+                {
+                    Nombre: "Administración",
+                    Linkk: Landing
+                }
             )
         );
-        Set(varMyNa,User().FullName);
-        Set(varMyphoto,User().Image)
-    StartScreen: =
+        Set(
+            varMyNa,
+            User().FullName
+        );
+        Set(
+            varMyphoto,
+            User().Image
+        )
+    StartScreen: |-
+        =If(
+            Not(IsBlank(Param("Guid"))) && Param("Actividad") = "MM",
+            'Screen Muestras Medicas y Muestras Gratis',
+            Landing
+        )
 

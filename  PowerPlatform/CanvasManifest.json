@@ -75,7 +75,7 @@
       "useexperimentalcdsconnector": true,
       "useexperimentalsqlconnector": true,
       "useguiddatatypes": true,
-      "usenonblockingonstartrule": true,
+      "usenonblockingonstartrule": false,
       "webbarcodescanner": false,
       "zeroalltabindexes": false
     },
@@ -113,6 +113,7 @@
     "Landing",
     "Screen Expedientes",
     "Screen Materiales promocionales y no promocionales",
+    "Screen Muestras Medicas y Muestras Gratis",
     "Screen externos"
   ]
 }

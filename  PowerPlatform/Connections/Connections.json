@@ -160,8 +160,7 @@
     "datasets": {
       "https://axonpharma.sharepoint.com/sites/Gestor_Documental_Desarrollo": {
         "datasetOverride": {
-          "environmentVariableName": "bext_varSharepoint",
-          "name": "https://axonpharma.sharepoint.com/sites/Gestor_Documental_Desarrollo"
+          "environmentVariableName": "bext_varSharepoint"
         },
         "dataSources": {
           "Actividad": {
@@ -181,6 +180,9 @@
           },
           "materiales ERP": {
             "tableName": "60ea8cac-5034-4cc9-996d-e8e82df9f1cd"
+          },
+          "muestras medicas": {
+            "tableName": "c73c116d-ab1a-4a0d-9c0c-0242166e7e7c"
           },
           "Proceso": {
             "tableName": "940f936e-e048-4e3b-8a34-3b75635a5b6b"
@@ -207,7 +209,8 @@
       "Documentos_1",
       "sub_actividad",
       "invitados",
-      "materiales ERP"
+      "materiales ERP",
+      "muestras medicas"
     ],
     "dependencies": {},
     "dependents": [

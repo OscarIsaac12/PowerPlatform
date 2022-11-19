@@ -7,7 +7,12 @@
         Height: =631
         NumberOfColumns: =1
         OnReset: =
-        OnSuccess: =ResetForm(FormExpedientes);ClearCollect(ColeccionExpedientes,Expedientes)
+        OnSuccess: |-
+            =ResetForm(FormExpedientes);
+            ClearCollect(
+                ColeccionExpedientes,
+                Expedientes
+            )
         Width: =885
         X: =392
         Y: =28
@@ -1323,7 +1328,11 @@
                 DataCardValue7.Text
             );
             Creaciondeexpediente.Run(
-                DataCardValue3.Selected.sigla,
+                If(
+                    IsBlank(DataCardValue3.Selected.sigla),
+                    "PE",
+                    DataCardValue3.Selected.sigla
+                ),
                 DataCardValue5.Selected.cod_act,
                 //DataCardValue4.Selected.Sigla;
                 Concat(
@@ -1336,7 +1345,7 @@
                 ),
                 DataCardValue2.Text,
                 DataCardValue7.Text,
-                    JSON(ColeccionRepresentada),
+                JSON(ColeccionRepresentada),
                 DataCardValue4.Text,
                 DataCardValue8.Text
             );
