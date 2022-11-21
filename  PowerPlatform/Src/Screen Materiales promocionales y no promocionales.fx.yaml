@@ -2,3 +2,14 @@
 
     Menu_4 As Menu:
 
+    Form1 As form:
+        X: =500
+        Y: =108
+        ZIndex: =2
+
+    Label6 As label:
+        Height: =51
+        Text: ="Texto"
+        X: =482
+        ZIndex: =3
+
