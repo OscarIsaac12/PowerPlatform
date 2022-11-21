@@ -108,6 +108,8 @@ App As appinfo:
         =If(
             Not(IsBlank(Param("Guid"))) && Param("Actividad") = "MM",
             'Screen Muestras Medicas y Muestras Gratis',
+            Not(IsBlank(Param("Guid"))) && Param("Actividad") = "MT",
+            'Screen Materiales promocionales y no promocionales',
             Landing
         )
 
