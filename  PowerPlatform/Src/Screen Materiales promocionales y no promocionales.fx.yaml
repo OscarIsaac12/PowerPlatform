@@ -2,14 +2,14 @@
 
     Menu_4 As Menu:
 
-    FormExpedientes_1 As form:
+    Form_MT As form:
         DataSource: =mt
         DefaultMode: =FormMode.New
         Height: =631
         NumberOfColumns: =1
         OnReset: =
         OnSuccess: |-
-            =ResetForm(FormExpedientes_1);
+            =ResetForm(Form_MT);
             ClearCollect(
                 ColeccionExpedientes,
                 Expedientes
@@ -97,7 +97,7 @@
             Height: =50
             MaxLength: =DataSourceInfo([@mt], DataSourceInfo.MaxLength, "cod_mat")
             Required: =false
-            Update: =DataCardValue27.Text
+            Update: =DataCardValue27.Selected.nombre_mat
             Width: =885
             X: =0
             Y: =1
@@ -827,4 +827,18 @@
                 Wrap: =false
                 Y: =DataCardKey37.Y
                 ZIndex: =4
+
+    Crear_MM_1 As button:
+        Fill: =RGBA(0, 119, 200, 1)
+        Height: =66
+        OnSelect: =SubmitForm(Form_MM)
+        RadiusBottomLeft: =2
+        RadiusBottomRight: =2
+        RadiusTopLeft: =2
+        RadiusTopRight: =2
+        Text: ="Crear solicitud"
+        Width: =688
+        X: =490
+        Y: =690
+        ZIndex: =3
 
