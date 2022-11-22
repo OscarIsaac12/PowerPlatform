@@ -1014,6 +1014,70 @@
                 Y: =DataCardKey10.Y
                 ZIndex: =4
 
+        cod_mat_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="cod_mat"
+            Default: =ThisItem.cod_mat
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Expedientes],DataSourceInfo.DisplayName,"cod_mat")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "cod_mat")
+            Required: =false
+            Update: =DataCardValue38.Selected.cod_mat
+            Width: =885
+            X: =0
+            Y: =16
+            ZIndex: =1
+
+            DataCardKey38 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage38 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue38.Y + DataCardValue38.Height
+                ZIndex: =3
+
+            StarVisible38 As label:
+                Align: =Align.Center
+                Height: =DataCardKey38.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey38.Y
+                ZIndex: =4
+
+            DataCardValue38 As combobox:
+                BorderColor: =RGBA(0, 119, 200, 1)
+                DisplayFields: =["nombre_mat"]
+                IsSearchable: =false
+                Items: ='materiales ERP'
+                SearchFields: =["nombre_mat"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Width: =Parent.Width - 60
+                X: =DataCardValue19.X
+                Y: =40
+                ZIndex: =5
+
         Proceso_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Proceso"
@@ -1259,7 +1323,7 @@
             MaxLength: =DataSourceInfo([@Expedientes], DataSourceInfo.MaxLength, "Title")
             Required: =true
             Update: =DataCardValue1.Text
-            Visible: =false
+            Visible: =If(DataCardValue5.Selected.cod_act = "MT",true,false)
             Width: =885
             X: =0
             Y: =13
@@ -1290,8 +1354,8 @@
                 RadiusTopRight: =0
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
-                X: =41
-                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                X: =45
+                Y: =50
                 ZIndex: =2
 
             ErrorMessage1 As label:
