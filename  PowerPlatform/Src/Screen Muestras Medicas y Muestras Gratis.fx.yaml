@@ -871,6 +871,20 @@
                         exp_guid = ex_guid
                     ),
                     {status_exp: "Devoluciones recibidas y confirmadas"}
+                );
+                UpdateContext(
+                    {
+                        show_PopUpInformation: true,
+                        information_PopUp: {
+                            nformation_Icon: Icon.CheckBadge,
+                            information_Text: "Tarea finalizada correctamente.",
+                            show_button: true,
+                            button_Text: "ACEPTAR",
+                            show_IconClose: false,
+                            page_Navigate: Landing,
+                            can_Navigate: true
+                        }
+                    }
                 )
             RadiusBottomLeft: =2
             RadiusBottomRight: =2
