@@ -42,7 +42,7 @@
         guid_expediente_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
-            Default: =ThisItem.guid_expediente
+            Default: =ThisItem.ex_guid
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'muestras medicas'],DataSourceInfo.DisplayName,"Title")
             Fill: =RGBA(0, 0, 0, 0)
@@ -112,7 +112,7 @@
         cod_material_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="cod_Material"
-            Default: =ThisItem.cod_material
+            Default: =ThisItem.cod_mat
             DisplayMode: =Parent.DisplayMode
             DisplayName: ="Código material"
             Fill: =RGBA(0, 0, 0, 0)
@@ -600,7 +600,7 @@
         nombre_material_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="nombre_material"
-            Default: =ThisItem.nombre_material
+            Default: =ThisItem.nom_mat
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'muestras medicas'],DataSourceInfo.DisplayName,"nombre_material")
             Fill: =RGBA(0, 0, 0, 0)
@@ -738,7 +738,7 @@
         cod_expediente_DataCard1 As typedDataCard.numberEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="cod_Expediente"
-            Default: =ThisItem.cod_expediente
+            Default: =ThisItem.cod_exp
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'muestras medicas'],DataSourceInfo.DisplayName,"cod_Expediente")
             Fill: =RGBA(0, 0, 0, 0)
