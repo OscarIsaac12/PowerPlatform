@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "f4bf5d7b-b2d9-4938-8b13-c636c169c5bb",
+    "Name": "AprobacionesMM",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "ded97f28-c069-ed11-81ac-002248370e3e"
+  }
+]

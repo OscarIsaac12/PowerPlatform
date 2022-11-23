@@ -1,10 +1,45 @@
 "'Screen Muestras Medicas y Muestras Gratis' As screen":
-    OnVisible: =Set(varPantalla,"Expedientes")
+    OnVisible: |-
+        =Set(
+            varPantalla,
+            "MM"
+        );
+        UpdateContext(
+            {
+                show_PopUpNotificarAOL: false,
+                show_PopUpInformation: false,
+                information_PopUp: {
+                    information_Icon: Icon.Add,
+                    information_Text: "SampleText",
+                    show_button: true,
+                    button_Text: "",
+                    show_IconClose: false,
+                    page_Navigate: App.ActiveScreen,
+                    can_Navigate: true
+                }
+            }
+        )
 
-    Crear_MM As button:
+    btn_Crear_MM As button:
         Fill: =RGBA(0, 119, 200, 1)
         Height: =66
-        OnSelect: =SubmitForm(Form_MM)
+        OnSelect: |-
+            =SubmitForm(Form_MM);
+            AprobacionesMM.Run(Last('muestras medicas').ID);
+            UpdateContext(
+                {
+                    show_PopUpInformation: true,
+                    information_PopUp: {
+                        nformation_Icon: Icon.CheckBadge,
+                        information_Text: "Solicitud de devolución creada correctamente.",
+                        show_button: true,
+                        button_Text: "ACEPTAR",
+                        show_IconClose: false,
+                        page_Navigate: Landing,
+                        can_Navigate: true
+                    }
+                }
+            )
         RadiusBottomLeft: =2
         RadiusBottomRight: =2
         RadiusTopLeft: =2
@@ -802,4 +837,91 @@
                 Wrap: =false
                 Y: =DataCardKey25.Y
                 ZIndex: =4
+
+    grp_PopUpNotifcarAOL As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =23
+
+        rec_BackgroundAOL As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.58)
+            Height: =App.Height
+            Visible: =show_PopUpNotificarAOL
+            Width: =App.Width
+            ZIndex: =19
+
+        rec_InfoAOL As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =150
+            Visible: =show_PopUpNotificarAOL
+            Width: =500
+            X: =(App.Width/2)-(Self.Width/2)
+            Y: =(App.Height/2)-(Self.Height/2)
+            ZIndex: =20
+
+        btn_NotificarAOL As button:
+            Fill: =RGBA(0, 119, 200, 1)
+            OnSelect: |-
+                =Patch(
+                    Expedientes,
+                    LookUp(
+                        Expedientes,
+                        exp_guid = ex_guid
+                    ),
+                    {status_exp: "Devoluciones recibidas y confirmadas"}
+                );
+                UpdateContext(
+                    {
+                        show_PopUpInformation: true,
+                        information_PopUp: {
+                            nformation_Icon: Icon.CheckBadge,
+                            information_Text: "Tarea finalizada correctamente.",
+                            show_button: true,
+                            button_Text: "ACEPTAR",
+                            show_IconClose: false,
+                            page_Navigate: Landing,
+                            can_Navigate: true
+                        }
+                    }
+                )
+            RadiusBottomLeft: =2
+            RadiusBottomRight: =2
+            RadiusTopLeft: =2
+            RadiusTopRight: =2
+            Text: ="Si, notificar"
+            Visible: =show_PopUpNotificarAOL
+            Width: =rec_InfoAOL.Width-40
+            X: =rec_InfoAOL.X+20
+            Y: =lbl_InfoAOL.Y+lbl_InfoAOL.Height+20
+            ZIndex: =21
+
+        lbl_InfoAOL As label:
+            Align: =Align.Center
+            Text: ="¿Deseá notificar la finalización de su tarea?"
+            Visible: =show_PopUpNotificarAOL
+            Width: =rec_InfoAOL.Width-40
+            X: =rec_InfoAOL.X+20
+            Y: =rec_InfoAOL.Y+20
+            ZIndex: =22
+
+    grp_ModalInformation As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =25
+
+        cmp_ModalInformacion_1 As cmp_ModalInformacion:
+            information_PopUp: =information_PopUp
+            Visible: =show_PopUpInformation
+            ZIndex: =23
+
+        tgl_ModalInformation As toggleSwitch:
+            Default: =cmp_ModalInformacion_1.visible_PopUp
+            Visible: =false
+            X: =40
+            Y: =40
+            ZIndex: =24
 
