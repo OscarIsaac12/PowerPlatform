@@ -140,6 +140,7 @@
 
             DataCardValue27 As combobox:
                 BorderColor: =RGBA(0, 119, 200, 1)
+                DefaultSelectedItems: =LookUp('materiales ERP',cod_mat = exp_registro.cod_mat)
                 DisplayFields: =["nombre_mat"]
                 IsSearchable: =false
                 Items: ='materiales ERP'
@@ -841,4 +842,12 @@
         X: =490
         Y: =690
         ZIndex: =3
+
+    Button1 As button:
+        OnSelect: |-
+            =Set(exp_guid,"5e76c36c-d541-49f5-b645-a787ac578760");
+            Set(exp_registro, LookUp(Expedientes,ex_guid = exp_guid)) 
+        Text: ="Botón"
+        X: =315
+        ZIndex: =4
 
