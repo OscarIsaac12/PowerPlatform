@@ -19,7 +19,7 @@ App As appinfo:
         );
         ClearCollect(
             Lotes,
-            [
+            ["0",
                 "1",
                 "2",
                 "3",

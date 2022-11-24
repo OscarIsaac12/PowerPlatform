@@ -73,7 +73,7 @@
         "Name": "rec_BackgroundAOL_1",
         "Parent": "cmp_ModalInformacion",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 293,
+        "PublishOrderIndex": 306,
         "Rules": [
           {
             "Category": "Design",
@@ -257,7 +257,7 @@
         "Name": "rec_InfoAOL_1",
         "Parent": "cmp_ModalInformacion",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 294,
+        "PublishOrderIndex": 307,
         "Rules": [
           {
             "Category": "Design",
@@ -471,7 +471,7 @@
         "Name": "Icon5_1",
         "Parent": "cmp_ModalInformacion",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 295,
+        "PublishOrderIndex": 308,
         "Rules": [
           {
             "Category": "Design",
@@ -723,7 +723,7 @@
         "Name": "Icon5",
         "Parent": "cmp_ModalInformacion",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 296,
+        "PublishOrderIndex": 309,
         "Rules": [
           {
             "Category": "Design",
@@ -988,7 +988,7 @@
         "Name": "lbl_InfoAOL_1",
         "Parent": "cmp_ModalInformacion",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 297,
+        "PublishOrderIndex": 310,
         "Rules": [
           {
             "Category": "Data",
@@ -1385,7 +1385,7 @@
         "Name": "btn_NotificarAOL_1",
         "Parent": "cmp_ModalInformacion",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 298,
+        "PublishOrderIndex": 311,
         "Rules": [
           {
             "Category": "Data",
