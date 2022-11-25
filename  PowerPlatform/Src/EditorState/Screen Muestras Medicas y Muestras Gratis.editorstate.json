@@ -1206,7 +1206,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "cantidad_DataCard1",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1366,7 +1366,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "causal_devolucion_DataCard1",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2057,7 +2057,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "cod_material_DataCard1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2217,7 +2217,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "comentarios_solicitante_DataCard1",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5382,7 +5382,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey28",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9228,7 +9228,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue28",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12615,7 +12615,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage28",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12897,7 +12897,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "fecha_vencimiento_DataCard1",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13434,7 +13434,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "guid_expediente_DataCard1",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14079,7 +14079,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lote_DataCard1",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14499,7 +14499,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "numero_cajas_DataCard1",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18135,7 +18135,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible28",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18433,7 +18433,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "status_MM_DataCard1",
-      "ParentIndex": 0,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

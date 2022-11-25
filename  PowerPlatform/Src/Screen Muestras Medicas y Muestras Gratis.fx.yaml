@@ -7,22 +7,43 @@
         UpdateContext(
             {
                 show_PopUpNotificarAOL: false,
-                show_PopUpInformation: false,
-                information_PopUp: {
-                    information_Icon: Icon.Add,
-                    information_Text: "SampleText",
-                    show_button: true,
-                    button_Text: "",
-                    show_IconClose: false,
-                    page_Navigate: App.ActiveScreen,
-                    can_Navigate: true
-                },
                 show_PopUpQuestionCreate: false,
                 show_PopUpQuestionCancelCreate: false,
                 question_Information: {
                     question_Text: "SampleText",
                     button_Text_Yes: "Si",
                     button_Text_No: "No"
+                },
+                show_PopUpInformation: Not(Or(
+                    DateValue(
+                        LookUp(
+                            Expedientes,
+                            ex_guid = exp_guid
+                        ).Creado
+                    ) <= Date(
+                        Year(Today()),
+                        Month(Today()),
+                        1
+                    ),
+                    DateValue(
+                        LookUp(
+                            Expedientes,
+                            ex_guid = exp_guid
+                        ).Creado
+                    ) >= Date(
+                        Year(Today()),
+                        Month(Today()),
+                        6
+                    )
+                )),
+                information_PopUp: {
+                    information_Icon: Icon.Add,
+                    information_Text: "Este formulario ya no esta disponible.",
+                    show_button: true,
+                    button_Text: "Aceptar",
+                    show_IconClose: false,
+                    page_Navigate: Landing,
+                    can_Navigate: true
                 }
             }
         )
@@ -51,7 +72,7 @@
                             ) & "
             " & If(
                                 IsBlank(DataCardValue16.Text),
-                                "+ El campo lote es obligatorio, por favor completarlo."
+                                "+  El campo lote es obligatorio, por favor completarlo."
                             ) & "
             " & If(
                                 IsBlank(DataCardValue18.SelectedDate),
@@ -104,8 +125,8 @@
                     show_PopUpQuestionCancelCreate: true,
                     question_Information: {
                         question_Text: "¿Está seguro de cancelar?",
-                        button_Text_Yes: "Si",
-                        button_Text_No: "No"
+                        button_Text_Yes: "Aceptar",
+                        button_Text_No: "Cancelar"
                     }
                 }
             )

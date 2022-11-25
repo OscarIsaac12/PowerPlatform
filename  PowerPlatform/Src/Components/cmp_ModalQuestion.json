@@ -73,7 +73,7 @@
         "Name": "rec_BackgroundQuestion",
         "Parent": "cmp_ModalQuestion",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 320,
+        "PublishOrderIndex": 325,
         "Rules": [
           {
             "Category": "Design",
@@ -257,7 +257,7 @@
         "Name": "rec_InfoQuestion",
         "Parent": "cmp_ModalQuestion",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 321,
+        "PublishOrderIndex": 326,
         "Rules": [
           {
             "Category": "Design",
@@ -480,7 +480,7 @@
         "Name": "lbl_InfoPregunta",
         "Parent": "cmp_ModalQuestion",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 322,
+        "PublishOrderIndex": 327,
         "Rules": [
           {
             "Category": "Data",
@@ -877,7 +877,7 @@
         "Name": "btn_OpcionSi",
         "Parent": "cmp_ModalQuestion",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 323,
+        "PublishOrderIndex": 328,
         "Rules": [
           {
             "Category": "Data",
@@ -1250,7 +1250,7 @@
         "Name": "btn_OpcionNo",
         "Parent": "cmp_ModalQuestion",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 324,
+        "PublishOrderIndex": 329,
         "Rules": [
           {
             "Category": "Data",
