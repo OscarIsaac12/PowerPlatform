@@ -14,6 +14,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 43,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Screen Expedientes'.Container4_1.GaleríaUsuarioExistente.Items"
                 }
               ],
@@ -134,40 +174,60 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1.Items"
+                  "fullyQualifiedName": "Menu.Gallery4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1.Items",
+                  "fullyQualifiedName": "Menu.Gallery4.AccessibleLabel",
                   "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 43,
-                  "snippet": {
-                    "text": "in"
-                  }
                 }
               },
               "properties": {
-                "member": "Items",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1"
+                "member": "AccessibleLabel",
+                "module": "Menu",
+                "type": "Menu.Gallery4"
               }
             }
           ],
           "message": {
-            "arguments": [
-              "Filter"
-            ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 0
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Menu.Gallery4.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Menu.Gallery4.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Menu",
+                "type": "Menu.Gallery4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -234,19 +294,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Menu.Gallery4.AccessibleLabel"
+                  "fullyQualifiedName": "'Screen lista'.Gallery1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Menu.Gallery4.AccessibleLabel",
+                  "fullyQualifiedName": "'Screen lista'.Gallery1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Menu",
-                "type": "Menu.Gallery4"
+                "module": "Screen lista",
+                "type": "'Screen lista'.Gallery1"
               }
             }
           ],
@@ -264,19 +324,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Menu.Gallery4.TabIndex"
+                  "fullyQualifiedName": "'Screen lista'.Gallery1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Menu.Gallery4.TabIndex",
+                  "fullyQualifiedName": "'Screen lista'.Gallery1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Menu",
-                "type": "Menu.Gallery4"
+                "module": "Screen lista",
+                "type": "'Screen lista'.Gallery1"
               }
             }
           ],
@@ -288,6 +348,906 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.TextInput3_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.TextInput3_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.TextInput3_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.TextInput3_12.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.TextInput3_12.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.TextInput3_12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.ex_guid_mt_DataCard1.DataCardValue26.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.ex_guid_mt_DataCard1.DataCardValue26.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.ex_guid_mt_DataCard1.DataCardValue26"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.cod_mat_DataCard1.DataCardValue27.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.cod_mat_DataCard1.DataCardValue27.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.cod_mat_DataCard1.DataCardValue27"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.status_act_DataCard1.DataCardValue29.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.status_act_DataCard1.DataCardValue29.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.status_act_DataCard1.DataCardValue29"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a1_DataCard1.DataCardValue30.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a1_DataCard1.DataCardValue30.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a1_DataCard1.DataCardValue30"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a2_DataCard1.DataCardValue31.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a2_DataCard1.DataCardValue31.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a2_DataCard1.DataCardValue31"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a3_DataCard1.DataCardValue32.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a3_DataCard1.DataCardValue32.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a3_DataCard1.DataCardValue32"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_cad_DataCard1.DataCardValue33.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_cad_DataCard1.DataCardValue33.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_cad_DataCard1.DataCardValue33"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_cierre_DataCard1.DataCardValue34.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_cierre_DataCard1.DataCardValue34.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_cierre_DataCard1.DataCardValue34"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_aprob_rep_DataCard1.DataCardValue35.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_aprob_rep_DataCard1.DataCardValue35.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_aprob_rep_DataCard1.DataCardValue35"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_rec_DataCard1.DataCardValue36.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_rec_DataCard1.DataCardValue36.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_rec_DataCard1.DataCardValue36"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.'Datos adjuntos_DataCard1'.DataCardValue37.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.'Datos adjuntos_DataCard1'.DataCardValue37.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Materiales promocionales y no promocionales",
+                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.'Datos adjuntos_DataCard1'.DataCardValue37"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Icon1_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Icon1_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.Icon1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Icon1_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Icon1_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.Icon1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.guid_expediente_DataCard1.DataCardValue11.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.guid_expediente_DataCard1.DataCardValue11.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.guid_expediente_DataCard1.DataCardValue11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_material_DataCard1.DataCardValue19.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_material_DataCard1.DataCardValue19.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_material_DataCard1.DataCardValue19"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_material_DataCard1.drp_CodMaterial.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_material_DataCard1.drp_CodMaterial.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_material_DataCard1.drp_CodMaterial"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cantidad_DataCard1.DataCardValue13.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cantidad_DataCard1.DataCardValue13.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cantidad_DataCard1.DataCardValue13"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.lote_DataCard1.DataCardValue16.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.lote_DataCard1.DataCardValue16.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.lote_DataCard1.DataCardValue16"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.fecha_vencimiento_DataCard1.DataCardValue18.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.fecha_vencimiento_DataCard1.DataCardValue18.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.fecha_vencimiento_DataCard1.DataCardValue18"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.causal_devolucion_DataCard1.DataCardValue21.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.causal_devolucion_DataCard1.DataCardValue21.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.causal_devolucion_DataCard1.DataCardValue21"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.numero_cajas_DataCard1.DataCardValue22.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.numero_cajas_DataCard1.DataCardValue22.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.numero_cajas_DataCard1.DataCardValue22"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.comentarios_solicitante_DataCard1.DataCardValue24.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.comentarios_solicitante_DataCard1.DataCardValue24.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.comentarios_solicitante_DataCard1.DataCardValue24"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.nombre_material_DataCard1.DataCardValue20.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.nombre_material_DataCard1.DataCardValue20.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.nombre_material_DataCard1.DataCardValue20"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.aprobador_solicitud_DataCard1.DataCardValue23.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.aprobador_solicitud_DataCard1.DataCardValue23.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.aprobador_solicitud_DataCard1.DataCardValue23"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_expediente_DataCard1.DataCardValue25.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_expediente_DataCard1.DataCardValue25.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_expediente_DataCard1.DataCardValue25"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.tgl_ModalInformation.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.tgl_ModalInformation.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Muestras Medicas y Muestras Gratis",
+                "type": "'Screen Muestras Medicas y Muestras Gratis'.tgl_ModalInformation"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -954,36 +1914,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.Lote_DataCard1.DataCardValue1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.Lote_DataCard1.DataCardValue1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Expedientes",
-                "type": "'Screen Expedientes'.FormExpedientes.Lote_DataCard1.DataCardValue1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.ex_guid_DataCard1.DataCardValue8.AccessibleLabel"
                 }
               ],
@@ -1057,6 +1987,36 @@
                 "member": "AccessibleLabel",
                 "module": "Screen Expedientes",
                 "type": "'Screen Expedientes'.FormExpedientes.cod_mat_DataCard2.DataCardValue38"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.Lote_DataCard1.DataCardValue1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.Lote_DataCard1.DataCardValue1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Expedientes",
+                "type": "'Screen Expedientes'.FormExpedientes.Lote_DataCard1.DataCardValue1"
               }
             }
           ],
@@ -1434,966 +2394,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen lista'.Gallery1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen lista'.Gallery1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen lista",
-                "type": "'Screen lista'.Gallery1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen lista'.Gallery1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen lista'.Gallery1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen lista",
-                "type": "'Screen lista'.Gallery1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a2_DataCard1.DataCardValue31.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a2_DataCard1.DataCardValue31.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a2_DataCard1.DataCardValue31"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a3_DataCard1.DataCardValue32.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a3_DataCard1.DataCardValue32.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a3_DataCard1.DataCardValue32"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.ex_guid_mt_DataCard1.DataCardValue26.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.ex_guid_mt_DataCard1.DataCardValue26.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.ex_guid_mt_DataCard1.DataCardValue26"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_cad_DataCard1.DataCardValue33.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_cad_DataCard1.DataCardValue33.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_cad_DataCard1.DataCardValue33"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_cierre_DataCard1.DataCardValue34.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_cierre_DataCard1.DataCardValue34.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_cierre_DataCard1.DataCardValue34"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_aprob_rep_DataCard1.DataCardValue35.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_aprob_rep_DataCard1.DataCardValue35.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_aprob_rep_DataCard1.DataCardValue35"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_rec_DataCard1.DataCardValue36.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_rec_DataCard1.DataCardValue36.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_rec_DataCard1.DataCardValue36"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.'Datos adjuntos_DataCard1'.DataCardValue37.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.'Datos adjuntos_DataCard1'.DataCardValue37.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.'Datos adjuntos_DataCard1'.DataCardValue37"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.TextInput3_12.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.TextInput3_12.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.TextInput3_12"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.GaleríaUsuarioExistente_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.TextInput3_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.TextInput3_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Container4_2.TextInput3_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Icon1_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Icon1_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.Icon1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Icon1_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Icon1_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.Icon1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.guid_expediente_DataCard1.DataCardValue11.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.guid_expediente_DataCard1.DataCardValue11.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.guid_expediente_DataCard1.DataCardValue11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_material_DataCard1.DataCardValue19.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_material_DataCard1.DataCardValue19.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_material_DataCard1.DataCardValue19"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_material_DataCard1.drp_CodMaterial.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_material_DataCard1.drp_CodMaterial.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_material_DataCard1.drp_CodMaterial"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cantidad_DataCard1.DataCardValue13.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cantidad_DataCard1.DataCardValue13.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cantidad_DataCard1.DataCardValue13"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.lote_DataCard1.DataCardValue16.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.lote_DataCard1.DataCardValue16.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.lote_DataCard1.DataCardValue16"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.fecha_vencimiento_DataCard1.DataCardValue18.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.fecha_vencimiento_DataCard1.DataCardValue18.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.fecha_vencimiento_DataCard1.DataCardValue18"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.causal_devolucion_DataCard1.DataCardValue21.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.causal_devolucion_DataCard1.DataCardValue21.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.causal_devolucion_DataCard1.DataCardValue21"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.numero_cajas_DataCard1.DataCardValue22.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.numero_cajas_DataCard1.DataCardValue22.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.numero_cajas_DataCard1.DataCardValue22"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.comentarios_solicitante_DataCard1.DataCardValue24.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.comentarios_solicitante_DataCard1.DataCardValue24.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.comentarios_solicitante_DataCard1.DataCardValue24"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.nombre_material_DataCard1.DataCardValue20.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.nombre_material_DataCard1.DataCardValue20.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.nombre_material_DataCard1.DataCardValue20"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.aprobador_solicitud_DataCard1.DataCardValue23.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.aprobador_solicitud_DataCard1.DataCardValue23.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.aprobador_solicitud_DataCard1.DataCardValue23"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_expediente_DataCard1.DataCardValue25.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_expediente_DataCard1.DataCardValue25.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.Form_MM.cod_expediente_DataCard1.DataCardValue25"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.tgl_ModalInformation.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Muestras Medicas y Muestras Gratis'.tgl_ModalInformation.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Muestras Medicas y Muestras Gratis",
-                "type": "'Screen Muestras Medicas y Muestras Gratis'.tgl_ModalInformation"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.cod_mat_DataCard1.DataCardValue27.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.cod_mat_DataCard1.DataCardValue27.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.cod_mat_DataCard1.DataCardValue27"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.status_act_DataCard1.DataCardValue29.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.status_act_DataCard1.DataCardValue29.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.status_act_DataCard1.DataCardValue29"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a1_DataCard1.DataCardValue30.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a1_DataCard1.DataCardValue30.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Materiales promocionales y no promocionales",
-                "type": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.fecha_a1_DataCard1.DataCardValue30"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.exp_act"
                 }
               ],
@@ -2454,36 +2454,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.OnSuccess"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.OnSuccess",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "OnSuccess",
-                "module": "Screen Expedientes",
-                "type": "'Screen Expedientes'.FormExpedientes"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Screen Materiales promocionales y no promocionales'.Container6.Form_MT.OnSuccess"
                 }
               ],
@@ -2514,48 +2484,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.DataCard1.AdjuntoExpediente"
+                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.OnSuccess"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.DataCard1.AdjuntoExpediente",
+                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.OnSuccess",
                   "relativeAddress": 0
                 }
               },
               "properties": {
+                "member": "OnSuccess",
                 "module": "Screen Expedientes",
-                "type": "'Screen Expedientes'.FormExpedientes.DataCard1.AdjuntoExpediente"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Low"
-          },
-          "ruleId": "app-NumericPropertySizeWarning",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.cod_mat_DataCard2.DataCardValue38.X"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.cod_mat_DataCard2.DataCardValue38.X",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "X",
-                "module": "Screen Expedientes",
-                "type": "'Screen Expedientes'.FormExpedientes.cod_mat_DataCard2.DataCardValue38"
+                "type": "'Screen Expedientes'.FormExpedientes"
               }
             }
           ],
@@ -2565,8 +2506,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2596,7 +2537,66 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.DataCard1.AdjuntoExpediente"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.DataCard1.AdjuntoExpediente",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "module": "Screen Expedientes",
+                "type": "'Screen Expedientes'.FormExpedientes.DataCard1.AdjuntoExpediente"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Low"
+          },
+          "ruleId": "app-NumericPropertySizeWarning",
           "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.cod_mat_DataCard2.DataCardValue38.X"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Expedientes'.FormExpedientes.cod_mat_DataCard2.DataCardValue38.X",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "X",
+                "module": "Screen Expedientes",
+                "type": "'Screen Expedientes'.FormExpedientes.cod_mat_DataCard2.DataCardValue38"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
         }
       ],
       "tool": {
@@ -2729,23 +2729,6 @@
               }
             },
             {
-              "id": "app-NumericPropertySizeWarning",
-              "messageStrings": {
-                "issue": {
-                  "text": "Permitir la carga de archivos grandes de hasta 10\u00A0MB"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Reflexione sobre si necesita archivos adjuntos de este tamaño."
-                ],
-                "level": "Low",
-                "primaryCategory": "performance",
-                "whyFix": "Se recomienda hacer pruebas en todas las plataformas compatibles para asegurarse de que los archivos adjuntos de este tamaño se pueden cargar correctamente."
-              }
-            },
-            {
               "id": "app-InefficientDelayLoading",
               "messageStrings": {
                 "issue": {
@@ -2760,6 +2743,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Los controles que hacen referencia a controles en otras pantallas pueden ralentizar la carga y la navegación de la aplicación. Al hacer esto, puede que se fuerce a la aplicación a cargar las otras pantallas de inmediato, en lugar de esperar hasta que el usuario navegue a esa pantalla."
+              }
+            },
+            {
+              "id": "app-NumericPropertySizeWarning",
+              "messageStrings": {
+                "issue": {
+                  "text": "Permitir la carga de archivos grandes de hasta 10\u00A0MB"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Reflexione sobre si necesita archivos adjuntos de este tamaño."
+                ],
+                "level": "Low",
+                "primaryCategory": "performance",
+                "whyFix": "Se recomienda hacer pruebas en todas las plataformas compatibles para asegurarse de que los archivos adjuntos de este tamaño se pueden cargar correctamente."
               }
             }
           ],
