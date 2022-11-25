@@ -42,6 +42,7 @@
       "Modified": "Modificado",
       "nombre_material": "nom_mat",
       "numero_cajas": "numero_cajas",
+      "status_MM": "status_MM",
       "Title": "ex_guid"
     },
     "DatasetName": "https://axonpharma.sharepoint.com/sites/Gestor_Documental_Desarrollo",

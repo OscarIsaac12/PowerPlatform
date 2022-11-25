@@ -16,27 +16,96 @@
                     show_IconClose: false,
                     page_Navigate: App.ActiveScreen,
                     can_Navigate: true
+                },
+                show_PopUpQuestionCreate: false,
+                show_PopUpQuestionCancelCreate: false,
+                question_Information: {
+                    question_Text: "SampleText",
+                    button_Text_Yes: "Si",
+                    button_Text_No: "No"
                 }
             }
         )
 
     btn_Crear_MM As button:
         Fill: =RGBA(0, 119, 200, 1)
-        Height: =66
+        Height: =60
         OnSelect: |-
-            =SubmitForm(Form_MM);
-            AprobacionesMM.Run(Last('muestras medicas').ID);
-            UpdateContext(
+            =If(
+                Or(
+                    IsBlank(DataCardValue13.Text),
+                    IsBlank(DataCardValue16.Text),
+                    IsBlank(DataCardValue18.SelectedDate),
+                    IsBlank(DataCardValue22.Text),
+                    IsBlank(DataCardValue24.Text)
+                ),
+                UpdateContext(
+                    {
+                        show_PopUpInformation: true,
+                        information_PopUp: {
+                            show_Icon: false,
+                            information_Icon: Icon.CheckBadge,
+                            information_Text: "" & If(
+                                IsBlank(DataCardValue13.Text),
+                                "+ El campo cantidad es obligatorio, por favor completarlo."
+                            ) & "
+            " & If(
+                                IsBlank(DataCardValue16.Text),
+                                "+ El campo lote es obligatorio, por favor completarlo."
+                            ) & "
+            " & If(
+                                IsBlank(DataCardValue18.SelectedDate),
+                                "+ El campo fecha de vencimiento es obligatorio, por favor completarlo."
+                            ) & "
+            " & If(
+                                IsBlank(DataCardValue22.Text),
+                                "+ El campo número de cajas es obligatorio, por favor completarlo."
+                            ) & "
+            " & If(
+                                IsBlank(DataCardValue24.Text),
+                                "+ El campo comentarios del solicitante es obligatorio, por favor completarlo."
+                            ),
+                            show_button: true,
+                            button_Text: "Aceptar",
+                            show_IconClose: false,
+                            page_Navigate: Landing,
+                            can_Navigate: false
+                        }
+                    }
+                ),
+                UpdateContext(
+                    {
+                        show_PopUpQuestionCreate: true,
+                        question_Information: {
+                            question_Text: "Se creará una nueva solicitud de devoluciones regulares. 
+            ¿Desea continuar?",
+                            button_Text_Yes: "Aceptar",
+                            button_Text_No: "Cancelar"
+                        }
+                    }
+                )
+            )
+        RadiusBottomLeft: =2
+        RadiusBottomRight: =2
+        RadiusTopLeft: =2
+        RadiusTopRight: =2
+        Text: ="Crear"
+        Width: =(Form_MM.Width/2) -40
+        X: =Form_MM.X+30
+        Y: =Form_MM.Y+Form_MM.Height+20
+        ZIndex: =1
+
+    btn_Cancelar_MM As button:
+        Fill: =RGBA(9, 33, 98, 1)
+        Height: =60
+        OnSelect: |-
+            =UpdateContext(
                 {
-                    show_PopUpInformation: true,
-                    information_PopUp: {
-                        nformation_Icon: Icon.CheckBadge,
-                        information_Text: "Solicitud de devolución creada correctamente.",
-                        show_button: true,
-                        button_Text: "ACEPTAR",
-                        show_IconClose: false,
-                        page_Navigate: Landing,
-                        can_Navigate: true
+                    show_PopUpQuestionCancelCreate: true,
+                    question_Information: {
+                        question_Text: "¿Está seguro de cancelar?",
+                        button_Text_Yes: "Si",
+                        button_Text_No: "No"
                     }
                 }
             )
@@ -44,10 +113,10 @@
         RadiusBottomRight: =2
         RadiusTopLeft: =2
         RadiusTopRight: =2
-        Text: ="Crear Muestra"
-        Width: =688
-        X: =490
-        Y: =683
+        Text: ="Cancelar"
+        Width: =(Form_MM.Width/2) -40
+        X: =btn_Crear_MM.X+btn_Crear_MM.Width+20
+        Y: =Form_MM.Y+Form_MM.Height+20
         ZIndex: =2
 
     Icon1_1 As icon.ChevronLeft:
@@ -72,7 +141,76 @@
         Width: =900
         X: =390
         Y: =30
-        ZIndex: =18
+        ZIndex: =5
+
+        status_MM_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="status_MM"
+            Default: =ThisItem.status_MM
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'muestras medicas'],DataSourceInfo.DisplayName,"status_MM")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'muestras medicas'], DataSourceInfo.MaxLength, "status_MM")
+            Required: =false
+            Update: =DataCardValue28.Text
+            Visible: =false
+            Width: =900
+            X: =0
+            Y: =11
+            ZIndex: =1
+
+            DataCardKey28 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue28 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: ="solicitud generada"
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey28.Y + DataCardKey28.Height + 5
+                ZIndex: =2
+
+            ErrorMessage28 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue28.Y + DataCardValue28.Height
+                ZIndex: =3
+
+            StarVisible28 As label:
+                Align: =Align.Center
+                Height: =DataCardKey28.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey28.Y
+                ZIndex: =4
 
         guid_expediente_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -172,9 +310,9 @@
 
             DataCardValue19 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =drp_CodMaterial.Selected.cod_mat
+                Default: =LookUp(Expedientes,ex_guid = exp_guid).cod_mat
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.Disabled
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
@@ -211,19 +349,6 @@
                 Wrap: =false
                 Y: =DataCardKey19.Y
                 ZIndex: =4
-
-            drp_CodMaterial As combobox:
-                BorderColor: =RGBA(0, 119, 200, 1)
-                DisplayFields: =["nombre_mat"]
-                IsSearchable: =false
-                Items: ='materiales ERP'
-                SearchFields: =["nombre_mat"]
-                SearchItems: =[]
-                SelectMultiple: =false
-                Width: =Parent.Width - 60
-                X: =DataCardValue19.X
-                Y: =DataCardValue19.Y
-                ZIndex: =5
 
         cantidad_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -661,7 +786,7 @@
 
             DataCardValue20 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =drp_CodMaterial.Selected.nombre_mat
+                Default: =LookUp('materiales ERP',cod_mat = DataCardValue19.Text).nombre_mat
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 MaxLength: =Parent.MaxLength
@@ -850,7 +975,7 @@
             Height: =App.Height
             Visible: =show_PopUpNotificarAOL
             Width: =App.Width
-            ZIndex: =19
+            ZIndex: =6
 
         rec_InfoAOL As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
@@ -859,7 +984,7 @@
             Width: =500
             X: =(App.Width/2)-(Self.Width/2)
             Y: =(App.Height/2)-(Self.Height/2)
-            ZIndex: =20
+            ZIndex: =7
 
         btn_NotificarAOL As button:
             Fill: =RGBA(0, 119, 200, 1)
@@ -895,7 +1020,7 @@
             Width: =rec_InfoAOL.Width-40
             X: =rec_InfoAOL.X+20
             Y: =lbl_InfoAOL.Y+lbl_InfoAOL.Height+20
-            ZIndex: =21
+            ZIndex: =8
 
         lbl_InfoAOL As label:
             Align: =Align.Center
@@ -904,7 +1029,7 @@
             Width: =rec_InfoAOL.Width-40
             X: =rec_InfoAOL.X+20
             Y: =rec_InfoAOL.Y+20
-            ZIndex: =22
+            ZIndex: =9
 
     grp_ModalInformation As group:
         Height: =5
@@ -916,12 +1041,118 @@
         cmp_ModalInformacion_1 As cmp_ModalInformacion:
             information_PopUp: =information_PopUp
             Visible: =show_PopUpInformation
-            ZIndex: =23
+            ZIndex: =14
 
         tgl_ModalInformation As toggleSwitch:
             Default: =cmp_ModalInformacion_1.visible_PopUp
+            OnCheck: |-
+                =UpdateContext({show_PopUpInformation:false})
+            OnUncheck: |-
+                =UpdateContext({show_PopUpInformation:false})
             Visible: =false
             X: =40
             Y: =40
-            ZIndex: =24
+            ZIndex: =15
+
+    grp_ModalQuestionCreate_MM As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =29
+
+        cmp_ModalQuestionCreate_MM As cmp_ModalQuestion:
+            information_PopUp: =question_Information
+            Visible: =show_PopUpQuestionCreate
+            ZIndex: =10
+
+        tgl_ModalQuestionCreate_MM As toggleSwitch:
+            Default: =cmp_ModalQuestionCreate_MM.visible_PopUp
+            OnCheck: |-
+                =If(
+                    cmp_ModalQuestionCreate_MM.answer_PopUp,
+                    SubmitForm(Form_MM);
+                    AprobacionesMM.Run(Last('muestras medicas').ID);
+                    UpdateContext(
+                        {
+                            show_PopUpQuestionCreate: false,
+                            show_PopUpInformation: true,
+                            information_PopUp: {
+                                show_Icon: true,
+                                information_Icon: Icon.CheckBadge,
+                                information_Text: "Nueva solicitud para devoluciones regulares guardada correctamente",
+                                show_button: true,
+                                button_Text: "Aceptar",
+                                show_IconClose: false,
+                                page_Navigate: Landing,
+                                can_Navigate: true
+                            }
+                        }
+                    ),
+                    UpdateContext({show_PopUpQuestionCreate: false})
+                )
+            OnUncheck: |-
+                =If(
+                    cmp_ModalQuestionCreate_MM.answer_PopUp,
+                    SubmitForm(Form_MM);
+                    AprobacionesMM.Run(Last('muestras medicas').ID);
+                    UpdateContext(
+                        {
+                            show_PopUpQuestionCreate: false,
+                            show_PopUpInformation: true,
+                            information_PopUp: {
+                                show_Icon: true,
+                                information_Icon: Icon.CheckBadge,
+                                information_Text: "Nueva solicitud para devoluciones regulares guardada correctamente",
+                                show_button: true,
+                                button_Text: "Aceptar",
+                                show_IconClose: false,
+                                page_Navigate: Landing,
+                                can_Navigate: true
+                            }
+                        }
+                    ),
+                    UpdateContext({show_PopUpQuestionCreate: false})
+                )
+            Visible: =false
+            X: =60
+            Y: =60
+            ZIndex: =12
+
+    grp_ModalQuestionCancelCreate_MM As group:
+        Height: =5
+        Width: =5
+        X: =100
+        Y: =100
+        ZIndex: =30
+
+        cmp_ModalQuestionCancelCreate_MM As cmp_ModalQuestion:
+            information_PopUp: =question_Information
+            Visible: =show_PopUpQuestionCancelCreate
+            ZIndex: =11
+
+        tgl_ModalQuestionCancelCreate_MM As toggleSwitch:
+            Default: =cmp_ModalQuestionCancelCreate_MM.visible_PopUp
+            OnCheck: |-
+                =If(
+                    cmp_ModalQuestionCancelCreate_MM.answer_PopUp,
+                    Navigate(
+                        Landing,
+                        ScreenTransition.Fade
+                    )
+                );
+                UpdateContext({show_PopUpQuestionCancelCreate: false})
+            OnUncheck: |-
+                =If(
+                    cmp_ModalQuestionCancelCreate_MM.answer_PopUp,
+                    Navigate(
+                        Landing,
+                        ScreenTransition.Fade
+                    )
+                );
+                UpdateContext({show_PopUpQuestionCancelCreate: false})
+            Visible: =false
+            X: =80
+            Y: =80
+            ZIndex: =13
 

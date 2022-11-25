@@ -1,0 +1,82 @@
+cmp_ModalQuestion As CanvasComponent:
+    answer_PopUp: =var_Answer
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =App.Height
+    information_PopUp: |-
+        ={
+            question_Text: "SampleText",
+            button_Text_Yes: "Si",
+            button_Text_No: "No"
+        }
+    visible_PopUp: =var_visible
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    rec_BackgroundQuestion As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.58)
+        Height: =App.Height
+        Width: =App.Width
+        ZIndex: =1
+
+    rec_InfoQuestion As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =lbl_InfoPregunta.Height+btn_OpcionSi.Height+60
+        Width: =600
+        X: =(App.Width/2)-(Self.Width/2)
+        Y: =(App.Height/2)-(Self.Height/2)
+        ZIndex: =2
+
+    btn_OpcionSi As button:
+        Fill: =RGBA(0, 119, 200, 1)
+        OnSelect: |-
+            =Set(
+                var_visible,
+                !var_visible
+            );
+            Set(
+                var_Answer,
+                true
+            )
+        RadiusBottomLeft: =2
+        RadiusBottomRight: =2
+        RadiusTopLeft: =2
+        RadiusTopRight: =2
+        Text: =cmp_ModalQuestion.information_PopUp.button_Text_Yes
+        Width: =(rec_InfoQuestion.Width/2)-30
+        X: =rec_InfoQuestion.X+20
+        Y: =lbl_InfoPregunta.Y+lbl_InfoPregunta.Height+20
+        ZIndex: =3
+
+    lbl_InfoPregunta As label:
+        Align: =Align.Center
+        AutoHeight: =true
+        Size: =16
+        Text: =cmp_ModalQuestion.information_PopUp.question_Text
+        Width: =rec_InfoQuestion.Width-40
+        X: =rec_InfoQuestion.X+20
+        Y: =(App.Height/2)-(Self.Height/2)-30
+        ZIndex: =4
+
+    btn_OpcionNo As button:
+        Fill: =RGBA(9, 33, 98, 1)
+        OnSelect: |-
+            =Set(
+                var_visible,
+                !var_visible
+            );
+            Set(
+                var_Answer,
+                false
+            )
+        RadiusBottomLeft: =2
+        RadiusBottomRight: =2
+        RadiusTopLeft: =2
+        RadiusTopRight: =2
+        Text: =cmp_ModalQuestion.information_PopUp.button_Text_No
+        Width: =(rec_InfoQuestion.Width/2)-30
+        X: =btn_OpcionSi.X+btn_OpcionSi.Width+20
+        Y: =lbl_InfoPregunta.Y+lbl_InfoPregunta.Height+20
+        ZIndex: =5
+

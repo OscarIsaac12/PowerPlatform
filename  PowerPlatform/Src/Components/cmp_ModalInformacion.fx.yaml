@@ -3,11 +3,12 @@ cmp_ModalInformacion As CanvasComponent:
     Height: =App.Height
     information_PopUp: |-
         ={
+            show_Icon: true,
             information_Icon: Icon.Add,
             information_Text: "SampleText",
-            show_button:true,
+            show_button: true,
             button_Text: "",
-            show_IconClose:true,
+            show_IconClose: true,
             page_Navigate: App.ActiveScreen,
             can_Navigate: true
         }
@@ -26,7 +27,7 @@ cmp_ModalInformacion As CanvasComponent:
     rec_InfoAOL_1 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =lbl_InfoAOL_1.Height+btn_NotificarAOL_1.Height+Icon5.Height+90
-        Width: =500
+        Width: =600
         X: =(App.Width/2)-(Self.Width/2)
         Y: =(App.Height/2)-(Self.Height/2)
         ZIndex: =2
@@ -62,22 +63,41 @@ cmp_ModalInformacion As CanvasComponent:
         ZIndex: =3
 
     lbl_InfoAOL_1 As label:
-        Align: =Align.Center
+        Align: =If(Len(lbl_InfoAOL_1.Text) < 255, Align.Center,Align.Justify)
         AutoHeight: =true
         Size: =16
         Text: =cmp_ModalInformacion.information_PopUp.information_Text
         Width: =rec_InfoAOL_1.Width-40
         X: =rec_InfoAOL_1.X+20
-        Y: =Icon5.Y+Icon5.Height+20
+        Y: |-
+            =If(
+                cmp_ModalInformacion.information_PopUp.show_Icon,
+                Icon5.Y + Icon5.Height + 20,
+                (App.Height / 2) - (Self.Height/2) - 20
+            )
         ZIndex: =4
 
     Icon5 As icon.Alarm:
         Color: =RGBA(102, 182, 227, 1)
-        Height: =50
+        Height: |-
+            =If(
+                Or(
+                    cmp_ModalInformacion.information_PopUp.show_IconClose,
+                    cmp_ModalInformacion.information_PopUp.show_Icon
+                ),
+                50,
+                0
+            )
         Icon: =cmp_ModalInformacion.information_PopUp.information_Icon
+        Visible: =cmp_ModalInformacion.information_PopUp.show_Icon
         Width: =50
         X: =(App.Width/2)-(Self.Width/2)
-        Y: =(App.Height/2)-(Self.Height/2)-60
+        Y: |-
+            =If(
+                Self.Visible,
+                (App.Height / 2) - (Self.Height/2) - 60,
+                (App.Height / 2) - (Self.Height/2)-80
+            )
         ZIndex: =5
 
     Icon5_1 As icon.Alarm:
